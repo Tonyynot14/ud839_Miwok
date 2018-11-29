@@ -45,8 +45,9 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("Nine");
         words.add("Ten");
 
-
-        LinearLayout rootView = (LinearLayout)findViewById(R.id.rootView);
+    /*
+    This adapter recylcles views based on list and how many should be displayed on the page. 
+    */
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,words);
 
         ListView listView = (ListView) findViewById(R.id.list);
