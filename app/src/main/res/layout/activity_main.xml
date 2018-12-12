@@ -41,6 +41,7 @@
         style="@style/CategoryStyle"
         android:background="@color/category_colors"
         android:text="@string/category_colors"
+
        />
 
     <TextView
