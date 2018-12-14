@@ -46,7 +46,7 @@ public class ColorsActivity extends AppCompatActivity {
     /*
     This adapter recylcles views based on list and how many should be displayed on the page. object that provides views for a list view
     */
-        WordAdapter adapter = new WordAdapter (this, color);
+        WordAdapter adapter = new WordAdapter (this, color,R.color.category_colors);
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);

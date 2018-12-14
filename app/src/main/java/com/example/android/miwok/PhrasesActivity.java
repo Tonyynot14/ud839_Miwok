@@ -47,7 +47,7 @@ public class PhrasesActivity extends AppCompatActivity {
     /*
     This adapter recylcles views based on list and how many should be displayed on the page. object that provides views for a list view
     */
-        WordAdapter adapter = new WordAdapter (this, phrases);
+        WordAdapter adapter = new WordAdapter (this, phrases,R.color.category_phrases);
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);

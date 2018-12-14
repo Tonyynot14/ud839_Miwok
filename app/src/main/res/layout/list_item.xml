@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minHeight="@dimen/list_item_height"
-    android:background="@color/tan_background"
+
     >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/list_item_height"
+        android:layout_height="@dimen/list_item_height"
         android:id="@+id/thumbNail"
         android:src="@mipmap/ic_launcher"
 
@@ -22,6 +22,7 @@
         android:orientation="vertical"
         android:paddingLeft="16dp"
         android:background="@color/category_numbers"
+        android:id="@+id/text_container"
         >
 
 

@@ -45,7 +45,7 @@ public class FamilyActivity extends AppCompatActivity {
 
         /*This adapter recylcles views based on list and how many should be displayed on the page. object that provides views for a list view
                 */
-        WordAdapter adapter = new WordAdapter (this,family);
+        WordAdapter adapter = new WordAdapter (this,family,R.color.category_family);
 
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(adapter);

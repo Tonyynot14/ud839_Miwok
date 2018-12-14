@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.provider.UserDictionary;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,15 @@ import java.util.ArrayList;
 
 //custom adapter for displaying word custom class
 public class WordAdapter extends ArrayAdapter<Word>
-{
+
+
+{   // needs color of activity to change based on activity
+    private int actvityColor=0;
          // needs activity and list of words as variables to take in.
-        public WordAdapter(Activity context, ArrayList<Word> words)
+        public WordAdapter(Activity context, ArrayList<Word> words,int activityColor)
         {
             super(context,0,words);
+            this.actvityColor=activityColor;
         }
     @NonNull
     @Override
@@ -50,6 +55,7 @@ public class WordAdapter extends ArrayAdapter<Word>
         miwok.setText(word.getMiwok());
         english.setText(word.getEnglish());
 
+
         //If word has image then set it to the correct result and make it visible to see
         if (word.hasImage())
         {
@@ -62,8 +68,12 @@ public class WordAdapter extends ArrayAdapter<Word>
            resource.setVisibility(View.GONE);
         }
 
-
-
+        // Set theme color for list item certain linear view contains just text
+        View textContainer = listItemView.findViewById(R.id.text_container);
+        // Find the color the int maps too
+        int color = ContextCompat.getColor(getContext(),actvityColor);
+        //Sets the background color of the linear view to the color passed to the constructor
+        textContainer.setBackgroundColor(color);
 
 
 
